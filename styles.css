@@ -1,0 +1,418 @@
+/* ============================================
+   DOBBIE - Magical Desktop Assistant Styling
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: #050b0d;
+    color: #201610;
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #050b0d 0%, #0a1419 100%);
+    position: relative;
+}
+
+/* ============================================
+   Background Scene - Castle & Sky
+   ============================================ */
+
+.background-scene {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    background-image: url('assets/castle_banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 4px solid #5e3a1d;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* ============================================
+   Main Wrapper
+   ============================================ */
+
+.main-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 220px 18px 18px 18px;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+    overflow-y: auto;
+    background: linear-gradient(to bottom, transparent, #050b0d);
+}
+
+/* ============================================
+   Header Panel with Dobbie
+   ============================================ */
+
+.header-panel {
+    display: flex;
+    gap: 20px;
+    background: linear-gradient(135deg, #d6b37a 0%, #ddc499 100%);
+    border: 4px solid #5e3a1d;
+    border-radius: 2px;
+    padding: 12px;
+    box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dobbie-portrait {
+    flex-shrink: 0;
+}
+
+.portrait-frame {
+    width: 180px;
+    height: 160px;
+    background: linear-gradient(135deg, #d8c7a5 0%, #e5d4b0 100%);
+    border: 3px solid #d9b75b;
+    border-radius: 2px;
+    padding: 4px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.dobby-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1px;
+}
+
+.header-content {
+    flex: 1;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #0e1a12;
+    margin-bottom: 4px;
+    font-family: 'Papyrus', 'Georgia', serif;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #2a2118;
+    font-style: italic;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.instruction {
+    font-size: 10px;
+    color: #2f271c;
+    margin-bottom: 12px;
+}
+
+.quick-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.quick-btn {
+    background: linear-gradient(135deg, #8b5b2b 0%, #6d3f1d 100%);
+    color: #f4ebd1;
+    border: 2px solid #5e3a1d;
+    padding: 8px 16px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+    font-family: 'Georgia', serif;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quick-btn:hover {
+    background: linear-gradient(135deg, #a67c3f 0%, #8b5b2b 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.quick-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   Status Bar
+   ============================================ */
+
+.status-bar {
+    background: linear-gradient(135deg, #b18b4d 0%, #c4a56a 100%);
+    border: 2px solid #66441f;
+    padding: 8px 12px;
+    font-size: 10px;
+    font-style: italic;
+    color: #1d120e;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+#status-text {
+    display: block;
+}
+
+/* ============================================
+   Message Box
+   ============================================ */
+
+.message-box-header {
+    color: #f0d48c;
+    font-size: 10px;
+    font-weight: bold;
+    padding-left: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.message-box {
+    flex: 1;
+    background: linear-gradient(135deg, #d7c29c 0%, #e5d4b0 100%);
+    border: 4px solid #5e3a1d;
+    border-radius: 2px;
+    padding: 4px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
+    overflow-y: auto;
+}
+
+#conversation-log {
+    background: #e8dcc0;
+    padding: 16px;
+    height: 100%;
+    border: 2px solid #8b5b2b;
+    border-radius: 1px;
+    font-size: 11px;
+    line-height: 1.6;
+    overflow-y: auto;
+}
+
+#conversation-log::-webkit-scrollbar {
+    width: 8px;
+}
+
+#conversation-log::-webkit-scrollbar-track {
+    background: #d9c6aa;
+}
+
+#conversation-log::-webkit-scrollbar-thumb {
+    background: #8b5b2b;
+    border-radius: 4px;
+}
+
+#conversation-log::-webkit-scrollbar-thumb:hover {
+    background: #6d3f1d;
+}
+
+.message {
+    margin-bottom: 12px;
+}
+
+.message-time {
+    color: #a67c3f;
+    font-weight: bold;
+}
+
+.message-sender {
+    color: #163427;
+    font-weight: bold;
+    margin: 0 4px;
+}
+
+.message-sender.dobbie {
+    color: #2b1d15;
+}
+
+.message-text {
+    color: #201610;
+    display: inline;
+}
+
+/* ============================================
+   Input Area
+   ============================================ */
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    padding-top: 12px;
+}
+
+.command-input {
+    flex: 1;
+    padding: 11px 14px;
+    font-size: 13px;
+    font-family: 'Georgia', serif;
+    background: #e8dcc0;
+    color: #1a120d;
+    border: 2px solid #8b5b2b;
+    border-radius: 2px;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.command-input:focus {
+    border-color: #8b5b2b;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(139, 91, 43, 0.2);
+}
+
+.command-input::placeholder {
+    color: #a67c3f;
+}
+
+.send-btn,
+.mic-btn {
+    padding: 11px 18px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.send-btn {
+    background: linear-gradient(135deg, #364b3d 0%, #2a3a31 100%);
+    color: #d4e8d8;
+}
+
+.send-btn:hover {
+    background: linear-gradient(135deg, #445952 0%, #364b3d 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.send-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mic-btn {
+    background: linear-gradient(135deg, #d2a14b 0%, #e5b85f 100%);
+    color: #1d120e;
+    font-size: 16px;
+    min-width: 50px;
+}
+
+.mic-btn:hover {
+    background: linear-gradient(135deg, #e5b85f 0%, #f6d98d 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.mic-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mic-btn.listening {
+    animation: pulse-mic 1s infinite;
+}
+
+@keyframes pulse-mic {
+    0%, 100% {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(210, 161, 75, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 20px rgba(210, 161, 75, 0.8);
+    }
+}
+
+/* ============================================
+   Scrollbar Styling
+   ============================================ */
+
+.main-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-wrapper::-webkit-scrollbar-track {
+    background: rgba(42, 28, 18, 0.3);
+}
+
+.main-wrapper::-webkit-scrollbar-thumb {
+    background: #8b5b2b;
+    border-radius: 4px;
+}
+
+.main-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #6d3f1d;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 900px) {
+    .header-panel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dobbie-portrait {
+        order: -1;
+    }
+
+    .quick-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+    }
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message {
+    animation: fade-in 0.3s ease-out;
+}

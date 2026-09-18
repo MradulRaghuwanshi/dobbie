@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobbie - Your Magical Desktop Helper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Background with castle -->
+        <div class="background-scene"></div>
+
+        <!-- Main Content -->
+        <div class="main-wrapper">
+            <!-- Header with Dobbie -->
+            <div class="header-panel">
+                <div class="dobbie-portrait">
+                    <div class="portrait-frame">
+                        <img src="assets/dobby_portrait.png" alt="Dobby" class="dobby-img">
+                    </div>
+                </div>
+
+                <div class="header-content">
+                    <h1 class="title">DOBBY</h1>
+                    <p class="subtitle">Your magical desktop helper for apps, files, websites, and socks.</p>
+                    <p class="instruction">Click Mic and speak naturally, or type a command below.</p>
+                    
+                    <div class="quick-buttons">
+                        <button class="quick-btn" data-command="open chrome">CHROME</button>
+                        <button class="quick-btn" data-command="check files">FILES</button>
+                        <button class="quick-btn" data-command="search web">WEB</button>
+                        <button class="quick-btn" data-command="what can you do">HELP</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <span id="status-text">Voice ready. Click Mic and speak a command.</span>
+            </div>
+
+            <!-- Message Box -->
+            <div class="message-box-header">Message Box</div>
+            <div class="message-box">
+                <div id="conversation-log"></div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <input type="text" id="command-input" class="command-input" placeholder="Type your command here...">
+                <button id="send-btn" class="send-btn">Send</button>
+                <button id="mic-btn" class="mic-btn" title="Click to speak">🎙</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden file input for file operations -->
+    <input type="file" id="file-input" style="display: none;">
+
+    <script src="script.js"></script>
+</body>
+</html>

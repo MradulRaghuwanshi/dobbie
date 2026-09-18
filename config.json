@@ -1,0 +1,55 @@
+{
+  "apps": {
+    "vscode": "code",
+    "vs code": "code",
+    "visual studio code": "code",
+    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "google chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "edge": "msedge",
+    "notepad": "notepad",
+    "calculator": "calc",
+    "calc": "calc",
+    "explorer": "explorer",
+    "file explorer": "explorer",
+    "word": "winword",
+    "excel": "excel",
+    "powerpoint": "powerpnt",
+    "spotify": "spotify",
+    "paint": "mspaint",
+    "terminal": "wt",
+    "cmd": "cmd"
+  },
+  "browser": "chrome",
+  "web_search_engine": "https://www.google.com/search?q={query}",
+  "search_dirs": [
+    "%USERPROFILE%\\Desktop",
+    "%USERPROFILE%\\Documents",
+    "%USERPROFILE%\\Downloads",
+    "%USERPROFILE%\\Pictures",
+    "%USERPROFILE%\\Music",
+    "%USERPROFILE%\\Videos",
+    "%USERPROFILE%\\OneDrive"
+  ],
+  "match_threshold": 0.7,
+  "always_on_top": false,
+  "window_width": 900,
+  "window_height": 820,
+  "cmd_access": true,
+  "default_email_account": "mradulraghuwanshi@gmail.com",
+  "chrome_profiles": {
+    "mradulraghuwanshi@gmail.com": "",
+    "aartiraghuwanshi01@gmail.com": ""
+  },
+  "emails": [
+    {
+      "name": "mradul",
+      "email": "mradulraghuwanshi@gmail.com",
+      "app_password": "YOUR_APP_PASSWORD_HERE"
+    },
+    {
+      "name": "aarti",
+      "email": "aartiraghuwanshi01@gmail.com",
+      "app_password": "YOUR_APP_PASSWORD_HERE"
+    }
+  ]
+}
